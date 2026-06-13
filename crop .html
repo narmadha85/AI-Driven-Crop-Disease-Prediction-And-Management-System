@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Crop Disease System</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f2f2f2;
+}
+
+/* NAVIGATION */
+.navbar{
+  background:#2e7d32;
+  color:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.navbar ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+.navbar ul li{
+  cursor:pointer;
+}
+
+/* LOGIN */
+.login{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.box{
+  background:white;
+  padding:20px;
+  width:300px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  border-radius:10px;
+}
+
+.box input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+.box button{
+  width:100%;
+  padding:10px;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+/* DASHBOARD */
+.dashboard{
+  display:none;
+  padding:20px;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  margin:10px 0;
+  border-radius:8px;
+  box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+input[type="file"], input[type="text"]{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+button{
+  padding:10px;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <div>🌿 Crop AI System</div>
+  <ul>
+    <li onclick="showDash()">Dashboard</li>
+    <li>Upload</li>
+    <li onclick="logout()">Logout</li>
+  </ul>
+</div>
+
+<!-- LOGIN PAGE -->
+<div class="login" id="loginPage">
+  <div class="box">
+    <h2>Login</h2>
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard" id="dash">
+
+  <div class="card">
+    <h3>Upload Crop Image</h3>
+    <input type="text" placeholder="Crop Name">
+    <input type="file">
+    <button>Predict Disease</button>
+  </div>
+
+  <div class="card">
+    <h3>Result</h3>
+    <p>No prediction yet</p>
+  </div>
+
+</div>
+
+<script>
+function login(){
+  document.getElementById("loginPage").style.display="none";
+  document.getElementById("dash").style.display="block";
+}
+
+function logout(){
+  document.getElementById("loginPage").style.display="flex";
+  document.getElementById("dash").style.display="none";
+}
+
+function showDash(){
+  document.getElementById("loginPage").style.display="none";
+  document.getElementById("dash").style.display="block";
+}
+</script>
+
+</body>
+</html>
