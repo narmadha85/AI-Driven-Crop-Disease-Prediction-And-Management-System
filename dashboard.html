@@ -1,131 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Crop Disease System</title>
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#0b1220;
-color:white;
-}
-
-/* LOGIN */
-.login-container{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#0b1220,#14532d);
-}
-
-.login-box{
-width:320px;
-padding:30px;
-background:#111827;
-border-radius:12px;
-}
-
-.login-box input{
-width:100%;
-padding:10px;
-margin:10px 0;
-border-radius:6px;
-border:none;
-}
-
-.login-box button{
-width:100%;
-padding:10px;
-background:#22c55e;
-border:none;
-cursor:pointer;
-}
-
-/* DASHBOARD */
-.dashboard{display:none;}
-
-.sidebar{
-position:fixed;
-width:220px;
-height:100%;
-background:#111827;
-padding:20px;
-}
-
-.sidebar a{
-display:block;
-color:white;
-padding:10px;
-text-decoration:none;
-}
-
-.main{
-margin-left:220px;
-padding:20px;
-}
-
-.card{
-background:#111827;
-padding:20px;
-margin:10px 0;
-border-radius:10px;
-}
-</style>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- LOGIN -->
-<div class="login-container" id="loginPage">
-  <div class="login-box">
-    <h2>🌿 AI Crop Login</h2>
-    <input type="text" id="user" placeholder="Username">
-    <input type="password" id="pass" placeholder="Password">
-    <button onclick="login()">Login</button>
-  </div>
+<div class="container">
+
+    <h1>🌿 Crop Disease Dashboard</h1>
+
+    <p>Welcome to AI Crop Disease Prediction System</p>
+
 </div>
-
-<!-- DASHBOARD -->
-<div class="dashboard" id="dashboard">
-
-  <div class="sidebar">
-    <h2>Crop AI</h2>
-    <a href="#">Dashboard</a>
-    <a href="#">Prediction</a>
-    <a href="#">Reports</a>
-    <a href="#" onclick="logout()">Logout</a>
-  </div>
-
-  <div class="main">
-    <h2>Welcome Farmer 🌾</h2>
-
-    <div class="card">Crop Status</div>
-    <div class="card">Disease Alerts</div>
-    <div class="card">AI Prediction</div>
-    <div class="card">Recommendations</div>
-  </div>
-</div>
-
-<script>
-function login(){
-let u=document.getElementById("user").value;
-let p=document.getElementById("pass").value;
-
-if(u && p){
-document.getElementById("loginPage").style.display="none";
-document.getElementById("dashboard").style.display="block";
-}else{
-alert("Enter credentials");
-}
-}
-
-function logout(){
-document.getElementById("loginPage").style.display="flex";
-document.getElementById("dashboard").style.display="none";
-}
-</script>
 
 </body>
 </html>
