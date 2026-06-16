@@ -1,25 +1,112 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Dashboard</title>
+
+    <title>AI Crop Disease Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
 </head>
 
-<body style="background:#e6e6e6; font-family:Arial;">
+<body>
 
-  <div style="width:300px; margin:auto; margin-top:120px; background:white; padding:20px; border-radius:10px; text-align:center;">
+    <!-- Sidebar -->
 
-    <h2>Welcome Dashboard 🎉</h2>
-    <p>You are successfully logged in ✅</p>
+    <div class="sidebar">
 
-    <button onclick="logout()">Logout</button>
+        <h2>AI Crop</h2>
 
-  </div>
+        <ul>
 
-  <script>
-    function logout() {
-      window.location.href = "index.html";
-    }
-  </script>
+            <li>Dashboard</li>
+
+            <li>Upload Image</li>
+
+            <li>Disease Prediction</li>
+
+            <li>Recommendations</li>
+
+            <li>Logout</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <!-- Topbar -->
+
+        <div class="topbar">
+
+            <h1>Crop Disease Prediction Dashboard</h1>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Total Uploads</h3>
+
+                <p>25</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Diseases Found</h3>
+
+                <p>10</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Healthy Crops</h3>
+
+                <p>15</p>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Section -->
+
+        <div class="upload-section">
+
+            <h2>Upload Crop Image</h2>
+
+            <input type="file">
+
+            <br><br>
+
+            <button>Predict Disease</button>
+
+        </div>
+
+        <!-- Result Section -->
+
+        <div class="result-section">
+
+            <h2>Prediction Result</h2>
+
+            <p>Disease: Leaf Spot</p>
+
+            <p>Confidence: 95%</p>
+
+            <p>Solution: Use organic pesticide spray.</p>
+
+        </div>
+
+    </div>
+
+<script src="dashboard.js"></script>
 
 </body>
+
 </html>
