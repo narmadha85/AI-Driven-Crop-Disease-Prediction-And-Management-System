@@ -1,10 +1,65 @@
-function login() {
-  let user = document.getElementById("username").value;
-  let pass = document.getElementById("password").value;
+let crops = [];
 
-  if (user === "admin" && pass === "1234") {
-    window.location.href = "dashboard.html";
-  } else {
-    document.getElementById("message").innerText = "Invalid Login ❌";
-  }
+function addCrop() {
+
+    let cropInput = document.getElementById("cropName");
+
+    let cropName = cropInput.value;
+
+    if(cropName === "") {
+        alert("Enter Crop Name");
+        return;
+    }
+
+    crops.push(cropName);
+
+    displayCrops();
+
+    cropInput.value = "";
+}
+
+function displayCrops() {
+
+    let cropList = document.getElementById("cropList");
+
+    cropList.innerHTML = "";
+
+    for(let i = 0; i < crops.length; i++) {
+
+        cropList.innerHTML += `
+        
+        <li>
+            ${crops[i]}
+
+            <button onclick="editCrop(${i})">
+                Edit
+            </button>
+
+            <button onclick="deleteCrop(${i})">
+                Delete
+            </button>
+
+        </li>
+
+        `;
+    }
+}
+
+function editCrop(index) {
+
+    let newCrop = prompt("Edit Crop Name");
+
+    if(newCrop !== "") {
+
+        crops[index] = newCrop;
+
+        displayCrops();
+    }
+}
+
+function deleteCrop(index) {
+
+    crops.splice(index,1);
+
+    displayCrops();
 }

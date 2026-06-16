@@ -1,112 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
-    <title>AI Crop Disease Dashboard</title>
+    <title>Dashboard</title>
 
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <!-- Sidebar -->
+    <h1>AI Crop Disease Dashboard</h1>
 
-    <div class="sidebar">
+    <h3>Upload Crop Image</h3>
 
-        <h2>AI Crop</h2>
+    <input type="file">
 
-        <ul>
+    <br><br>
 
-            <li>Dashboard</li>
+    <input type="text" id="cropName" placeholder="Enter Crop Name">
 
-            <li>Upload Image</li>
+    <button onclick="addCrop()">Add</button>
+s
+    <ul id="cropList"></ul>
 
-            <li>Disease Prediction</li>
+    <br>
 
-            <li>Recommendations</li>
+    <button>Predict Disease</button>
 
-            <li>Logout</li>
+    <button>Logout</button>
 
-        </ul>
-
-    </div>
-
-    <!-- Main Content -->
-
-    <div class="main-content">
-
-        <!-- Topbar -->
-
-        <div class="topbar">
-
-            <h1>Crop Disease Prediction Dashboard</h1>
-
-        </div>
-
-        <!-- Cards -->
-
-        <div class="cards">
-
-            <div class="card">
-
-                <h3>Total Uploads</h3>
-
-                <p>25</p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Diseases Found</h3>
-
-                <p>10</p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Healthy Crops</h3>
-
-                <p>15</p>
-
-            </div>
-
-        </div>
-
-        <!-- Upload Section -->
-
-        <div class="upload-section">
-
-            <h2>Upload Crop Image</h2>
-
-            <input type="file">
-
-            <br><br>
-
-            <button>Predict Disease</button>
-
-        </div>
-
-        <!-- Result Section -->
-
-        <div class="result-section">
-
-            <h2>Prediction Result</h2>
-
-            <p>Disease: Leaf Spot</p>
-
-            <p>Confidence: 95%</p>
-
-            <p>Solution: Use organic pesticide spray.</p>
-
-        </div>
-
-    </div>
-
-<script src="dashboard.js"></script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>

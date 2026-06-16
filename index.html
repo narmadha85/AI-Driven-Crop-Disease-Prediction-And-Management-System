@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  <title>AI Crop Disease CRUD</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="login-box">
-  <h2>Login</h2>
+<h1>Crop Disease Management</h1>
 
-  <input type="text" id="username" placeholder="Username">
-  <input type="password" id="password" placeholder="Password">
+<input type="text" id="cropName" placeholder="Enter Crop Name">
 
-  <button onclick="login()">Login</button>
+<button onclick="addCrop()">Add Crop</button>
 
-  <p id="message"></p>
-</div>
+<ul id="cropList"></ul>
 
 <script src="script.js"></script>
 
