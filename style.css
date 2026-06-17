@@ -1,40 +1,49 @@
-body{
-    font-family: Arial;
-    background-color: #f0f8ff;
-    padding: 30px;
+body {
+
+  font-family: Arial;
+  padding: 20px;
+
 }
 
-h1{
-    color: green;
-    text-align: center;
+h1 {
+
+  color: green;
+
 }
 
-input{
-    padding: 10px;
-    width: 250px;
-    border: 2px solid green;
-    border-radius: 5px;
+#searchInput {
+
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 20px;
+
 }
 
-button{
-    padding: 10px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 5px;
+table {
+
+  border-collapse: collapse;
+
 }
 
-button:hover{
-    background-color: darkgreen;
+th, td {
+
+  padding: 12px;
+  text-align: center;
+
 }
 
-li{
-    background-color: white;
-    margin-top: 10px;
-    padding: 10px;
-    width: 400px;
-    border-radius: 5px;
-    list-style: none;
+th {
+
+  background-color: green;
+  color: white;
+
+}
+
+button {
+
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+
 }

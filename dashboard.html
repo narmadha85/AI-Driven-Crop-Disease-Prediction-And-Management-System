@@ -1,36 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-    <title>Dashboard</title>
+  <title>Dashboard</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <h1>AI Crop Disease Dashboard</h1>
+  <h1>AI Crop Disease Prediction Dashboard</h1>
 
-    <h3>Upload Crop Image</h3>
+  <input type="text"
+         id="searchInput"
+         placeholder="Search Crop Name">
 
-    <input type="file">
+  <table border="1" width="100%">
 
-    <br><br>
+    <thead>
 
-    <input type="text" id="cropName" placeholder="Enter Crop Name">
+      <tr>
 
-    <button onclick="addCrop()">Add</button>
-s
-    <ul id="cropList"></ul>
+        <th>ID</th>
+        <th>Crop Name</th>
+        <th>Disease</th>
+        <th>Confidence</th>
+        <th>Date</th>
+        <th>Action</th>
 
-    <br>
+      </tr>
 
-    <button>Predict Disease</button>
+    </thead>
 
-    <button>Logout</button>
+    <tbody id="tableBody">
 
-    <script src="script.js"></script>
+      <tr>
+
+        <td>1</td>
+        <td>Tomato</td>
+        <td>Leaf Spot</td>
+        <td>95%</td>
+        <td>17-06-2026</td>
+
+        <td>
+          <button onclick="deleteRow(this)">
+            Delete
+          </button>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>2</td>
+        <td>Rice</td>
+        <td>Blast</td>
+        <td>90%</td>
+        <td>17-06-2026</td>
+
+        <td>
+          <button onclick="deleteRow(this)">
+            Delete
+          </button>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>3</td>
+        <td>Potato</td>
+        <td>Early Blight</td>
+        <td>92%</td>
+        <td>17-06-2026</td>
+
+        <td>
+          <button onclick="deleteRow(this)">
+            Delete
+          </button>
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <script src="dashboard.js"></script>
 
 </body>
+
 </html>
